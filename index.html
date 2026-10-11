@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Romaisa Shabbir | Aspiring AI Engineer &amp; Python Developer</title>
+  <meta name="description" content="Portfolio of Romaisa Shabbir, a BS Artificial Intelligence student at BZU Multan building Python, machine learning and web projects.">
+  <meta name="author" content="Romaisa Shabbir">
+  <meta name="theme-color" content="#070b16">
+  <meta property="og:title" content="Romaisa Shabbir | Aspiring AI Engineer">
+  <meta property="og:description" content="BS Artificial Intelligence student building practical AI, Python and web projects.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Apply the saved theme before first paint to avoid a flash -->
+  <script>
+    try { document.documentElement.dataset.theme = localStorage.getItem('theme') || 'dark'; } catch (e) {}
+  </script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Romaisa Shabbir, back to top">RS<span>.</span></a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to light theme">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+          <svg class="icon icon-open" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="icon icon-close" aria-hidden="true"><use href="#i-close"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero section" id="home" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">BS Artificial Intelligence Student</p>
+          <p class="hero-name">Romaisa Shabbir</p>
+          <h1 id="hero-title">Building Intelligent Solutions for Real-World Problems.</h1>
+          <p class="hero-role">Aspiring AI Engineer | Python Developer | AI &amp; Machine Learning Enthusiast</p>
+          <p class="hero-intro">I'm an AI student at Bahauddin Zakariya University who learns by building. I enjoy turning Python, machine learning and web development concepts into working projects, and I'm looking for internships and entry-level opportunities to keep growing.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore My Projects</a>
+          </div>
+
+          <ul class="social-list" aria-label="Social links">
+            <li><a class="icon-btn" href="https://github.com/romaisashabbir23" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+            <li><a class="icon-btn" href="https://www.linkedin.com/in/romaisa-shabbir-032450387/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a class="icon-btn" href="mailto:romaisashabbir23@gmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+          </ul>
+        </div>
+
+        <!-- To use a real photo, replace the <svg> with:
+             <img src="assets/profile.jpg" alt="Portrait of Romaisa Shabbir" width="320" height="320"> -->
+        <figure class="hero-visual">
+          <div class="avatar-frame">
+            <svg class="avatar-art" viewBox="0 0 320 320" role="img" aria-label="Abstract neural network illustration with the initials RS">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" style="stop-color:var(--accent)"/>
+                  <stop offset="1" style="stop-color:var(--accent-2)"/>
+                </linearGradient>
+              </defs>
+              <g class="net-lines" stroke="url(#g1)" stroke-width="1.5" fill="none" opacity=".55">
+                <path d="M60 80 160 50 260 90M60 80 90 190 60 260M160 50 160 160 90 190M260 90 160 160 250 240M90 190 160 270 250 240M60 260 160 270M160 160 250 240"/>
+              </g>
+              <g fill="url(#g1)">
+                <circle cx="60" cy="80" r="7"/><circle cx="160" cy="50" r="9"/><circle cx="260" cy="90" r="7"/>
+                <circle cx="90" cy="190" r="8"/><circle cx="250" cy="240" r="8"/><circle cx="60" cy="260" r="6"/><circle cx="160" cy="270" r="7"/>
+              </g>
+              <circle cx="160" cy="160" r="52" fill="none" stroke="url(#g1)" stroke-width="2"/>
+              <text x="160" y="172" text-anchor="middle" font-family="Poppins, sans-serif" font-size="38" font-weight="600" fill="url(#g1)">RS</text>
+            </svg>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">About Me</p>
+          <h2 class="section-title" id="about-title">Learning AI by building with it</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm Romaisa, a BS Artificial Intelligence student at Bahauddin Zakariya University in Multan. I'm developing practical skills in programming, machine learning, web development and problem-solving.</p>
+            <p>I prefer to learn by making things: an algorithm visualizer, a Flask chatbot, a C++ management system. Each project helps me understand how a concept works beyond the textbook.</p>
+            <p>I'm still early in my journey, and I'm interested in internships and entry-level roles where I can contribute, learn from experienced engineers and keep improving.</p>
+          </div>
+
+          <ul class="highlights">
+            <li class="highlight glass reveal"><h3>Learning by building</h3><p>Real projects are how I turn new topics into skills.</p></li>
+            <li class="highlight glass reveal"><h3>Theory into practice</h3><p>I apply course concepts to small, working applications.</p></li>
+            <li class="highlight glass reveal"><h3>Exploring intelligent software</h3><p>Curious about how AI can make software more useful.</p></li>
+            <li class="highlight glass reveal"><h3>Always improving</h3><p>Regular practice to sharpen my technical and analytical skills.</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Technical Skills</p>
+          <h2 class="section-title" id="skills-title">What I work with and what I'm learning</h2>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill-card card reveal">
+            <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-code"/></svg></span>
+            <h3>Programming Languages</h3>
+            <ul class="skill-list">
+              <li><span>Python</span><em class="level">Primary language</em></li>
+              <li><span>C++</span><em class="level">Working knowledge</em></li>
+              <li><span>JavaScript</span><em class="level">Working knowledge</em></li>
+              <li><span>HTML5</span><em class="level">Working knowledge</em></li>
+              <li><span>CSS3</span><em class="level">Working knowledge</em></li>
+            </ul>
+          </article>
+
+          <article class="skill-card card reveal">
+            <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-cpu"/></svg></span>
+            <h3>AI &amp; Data Science</h3>
+            <ul class="skill-list">
+              <li><span>AI Fundamentals</span><em class="level">Learning</em></li>
+              <li><span>Machine Learning Fundamentals</span><em class="level">Learning</em></li>
+              <li><span>Data Analysis</span><em class="level">Learning</em></li>
+              <li><span>Data Visualization</span><em class="level">Learning</em></li>
+              <li><span>Python-Based AI Development</span><em class="level">Learning</em></li>
+            </ul>
+          </article>
+
+          <article class="skill-card card reveal">
+            <span class="skill-icon"><svg class="icon" aria-hidden="true"><use href="#i-tool"/></svg></span>
+            <h3>Tools &amp; Technologies</h3>
+            <ul class="skill-list">
+              <li><span>Git &amp; GitHub</span><em class="level">Working knowledge</em></li>
+              <li><span>Flask</span><em class="level">Working knowledge</em></li>
+              <li><span>VS Code</span><em class="level">Daily tool</em></li>
+              <li><span>MySQL</span><em class="level">Learning</em></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Featured Projects</p>
+          <h2 class="section-title" id="projects-title">Things I've built while learning</h2>
+        </header>
+
+        <div class="projects-grid">
+
+          <article class="project-card card reveal">
+            <div class="project-visual pv-learn" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            <div class="project-body">
+              <h3>AI Learn: AI Education Platform</h3>
+              <p>A learning platform that helps beginners understand AI topics through structured modules, quizzes and a guided roadmap.</p>
+              <ul class="features"><li>Structured learning modules</li><li>Quizzes to check understanding</li><li>Guided learning roadmap</li></ul>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card card reveal">
+            <div class="project-visual pv-graph" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="project-body">
+              <h3>Dijkstra's Algorithm Visualizer</h3>
+              <p>An interactive web app that shows how Dijkstra's algorithm explores a graph and finds the shortest route between nodes.</p>
+              <ul class="features"><li>Interactive graph exploration</li><li>Visual view of the shortest path</li><li>Flask-powered backend</li></ul>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Graph Algorithms</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card card reveal">
+            <div class="project-visual pv-chat" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="project-body">
+              <h3>Rule-Based Chatbot (Flask)</h3>
+              <p>A web-based chatbot prototype that answers user queries with predefined responses through a Flask backend. A foundation for moving toward NLP-based replies.</p>
+              <ul class="features"><li>Web chat interface</li><li>Predefined response logic</li><li>Flask backend</li></ul>
+              <ul class="tags"><li>Python</li><li>Flask</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card card reveal">
+            <div class="project-visual pv-iris" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="project-body">
+              <h3>Iris Classification ML Project</h3>
+              <p>A machine learning project that explores the Iris dataset and walks through training and using a classification model.</p>
+              <ul class="features"><li>Dataset exploration</li><li>Model training workflow</li><li>Classification predictions</li></ul>
+              <ul class="tags"><li>Python</li><li>Machine Learning</li><li>Pandas</li><li>Scikit-learn</li><li>Data Visualization</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card card reveal">
+            <div class="project-visual pv-car" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="project-body">
+              <h3>Car Rental Management System</h3>
+              <p>An object-oriented C++ application for managing cars, customers, rentals, returns, availability and rental charges.</p>
+              <ul class="features"><li>Car and customer management</li><li>Rentals, returns and availability</li><li>Rental charge calculation</li></ul>
+              <ul class="tags"><li>C++</li><li>Object-Oriented Programming</li><li>File Handling</li></ul>
+            </div>
+          </article>
+
+          <article class="project-card card reveal">
+            <div class="project-visual pv-calc" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+            <div class="project-body">
+              <h3>Responsive Calculator</h3>
+              <p>A simple interactive calculator that demonstrates frontend fundamentals and JavaScript arithmetic operations.</p>
+              <ul class="features"><li>Basic arithmetic operations</li><li>Responsive layout</li><li>JavaScript-driven logic</li></ul>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Education</p>
+          <h2 class="section-title" id="education-title">Academic background</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item glass reveal">
+            <span class="badge">Currently enrolled</span>
+            <h3>Bachelor of Science in Artificial Intelligence</h3>
+            <!-- Add your real years, e.g. "· 2024 – 2028" -->
+            <p class="meta">Bahauddin Zakariya University (BZU), Multan, Pakistan</p>
+            <p>University student building a foundation in programming, mathematics and machine learning.</p>
+          </li>
+          <li class="timeline-item glass reveal">
+            <h3>Intermediate</h3>
+            <p class="meta">Concordia College</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ CURRENTLY EXPLORING ============ -->
+    <section class="section" id="exploring" aria-labelledby="exploring-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Currently Exploring</p>
+          <h2 class="section-title" id="exploring-title">Areas I'm curious about right now</h2>
+        </header>
+
+        <ul class="explore-grid">
+          <li class="explore-item glass reveal"><h3>Machine Learning</h3><p>Training and evaluating simple models.</p></li>
+          <li class="explore-item glass reveal"><h3>AI Applications</h3><p>How AI solves everyday problems.</p></li>
+          <li class="explore-item glass reveal"><h3>Python Development</h3><p>Writing cleaner, more useful programs.</p></li>
+          <li class="explore-item glass reveal"><h3>Data Science</h3><p>Finding patterns and stories in data.</p></li>
+          <li class="explore-item glass reveal"><h3>Intelligent Chatbots</h3><p>Moving from rule-based replies to smarter ones.</p></li>
+          <li class="explore-item glass reveal"><h3>Web Applications</h3><p>Connecting backends and clean interfaces.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <p class="eyebrow">Contact</p>
+          <h2 class="section-title" id="contact-title">Have a Project, Opportunity, or Idea in Mind?</h2>
+          <p>Whether you're a recruiter, developer, collaborator or fellow student, I'd be glad to connect. I'm open to internships, entry-level roles and learning-focused collaborations.</p>
+
+          <div class="contact-links">
+            <a class="btn btn-primary" href="mailto:romaisashabbir23@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>Email</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/romaisa-shabbir-032450387/" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+            <a class="btn btn-outline" href="https://github.com/romaisashabbir23" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+          </div>
+        </div>
+
+        <!-- To send messages directly: create a free form at formspree.io and paste its URL
+             into data-endpoint (e.g. https://formspree.io/f/abcdwxyz). The note below then hides itself.
+             While data-endpoint is empty, submitting opens the visitor's email app instead. -->
+        <form class="contact-form glass reveal" id="contact-form" novalidate data-endpoint="" data-mailto="romaisashabbir23@gmail.com">
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="err-name">
+            <span class="field-error" id="err-name" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="err-email">
+            <span class="field-error" id="err-email" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="cf-subject">Subject</label>
+            <input id="cf-subject" name="subject" type="text" required aria-describedby="err-subject">
+            <span class="field-error" id="err-subject" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required aria-describedby="err-message"></textarea>
+            <span class="field-error" id="err-message" role="alert"></span>
+          </div>
+          <button class="btn btn-primary" type="submit" id="cf-submit">Send Message</button>
+          <p class="form-note" id="form-note">Submitting opens your email app with the message ready to send.</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="footer-name">Romaisa Shabbir</p>
+        <p class="footer-tagline">Aspiring AI Engineer, learning by building.</p>
+      </div>
+
+      <ul class="social-list" aria-label="Social links">
+        <li><a class="icon-btn" href="https://github.com/romaisashabbir23" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+        <li><a class="icon-btn" href="https://www.linkedin.com/in/romaisa-shabbir-032450387/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+        <li><a class="icon-btn" href="mailto:romaisashabbir23@gmail.com" aria-label="Send an email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+      </ul>
+
+      <button class="btn btn-outline btn-sm" id="back-to-top" type="button"><svg class="icon" aria-hidden="true"><use href="#i-up"/></svg>Back to Top</button>
+    </div>
+    <p class="copyright container">&copy; <span id="year">2026</span> Romaisa Shabbir. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
